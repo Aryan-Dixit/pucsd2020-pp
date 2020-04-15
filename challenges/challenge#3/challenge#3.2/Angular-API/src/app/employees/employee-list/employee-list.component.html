@@ -1,0 +1,9 @@
+<table class="table table-hover">
+    <tr *ngFor="let emp of service.list"></tr>
+    <td (click)="populateForm(emp)">{{emp.id}} - {{emp.first_name}}-{{emp.last_name}}</td>
+    <td (click)="populateForm(emp)">{{emp.email}}</td>
+    <td (click)="populateForm(emp)">{{emp.password}}</td>
+    <td (click)="populateForm(emp)">{{emp.contact_number}}</td>
+    <td (click)="populateForm(emp)">{{emp.updated_by}}</td>
+    <td><button (click)="onDelete(emp.id)" class="btn btn-sm btn-outline-danger">X</button></td>
+</table>

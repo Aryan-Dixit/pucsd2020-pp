@@ -1,0 +1,31 @@
+<form #form="ngForm" (submit)="onSubmit(form)">
+    <input type="hidden" name="EmployeeID" #EmployeeID="ngModel" [(ngModel)]="service.formData.EmployeeID">
+    <div class="form-group">
+        <label>First Name</label>
+        <input name="FirstName" #FirstName="ngModel" [(ngModel)]="service.formData.first_name" class="form-control" required>
+        <div class="validation-error" *ngIf="FirstName.invalid && FirstName.touched">This Field is Required</div>
+    </div>
+    <div class="form-group">
+        <label>Last Name</label>
+        <input name="LastName" #LastName="ngModel" [(ngModel)]="service.formData.last_name" class="form-control" required>
+        <div class="validation-error" *ngIf="LastName.invalid && LastName.touched">This Field is Required</div>
+    </div>
+    <div class="form-group">
+        <label>E-Mail</label>
+        <input name="EMail" #EMail="ngModel" [(ngModel)]="service.formData.email" class="form-control" required>
+        <div class="validation-error" *ngIf="EMail.invalid && EMail.touched">This Field is Required</div>
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <input name="Password" type="password" #Password="ngModel" [(ngModel)]="service.formData.password" class="form-control" required>
+        <div class="validation-error" *ngIf="Password.invalid && Password.touched">This Field is Required</div>
+    </div>
+    <div class="form-group">
+        <label>Contact Number</label>
+        <input name="ContactNumber" #ContactNumber="ngModel" [(ngModel)]="service.formData.contact_number" class="form-control" required>
+        <div class="validation-error" *ngIf="ContactNumber.invalid && ContactNumber.touched">This Field is Required</div>
+    </div>
+    <div class="form-group">
+        <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block">SUBMIT</button>
+    </div>
+</form>
