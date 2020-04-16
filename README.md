@@ -8,6 +8,12 @@ Calculator
 Resume in simple html
 Resume UI Route in Angular
 
+## Assignment-003
+Logger in C
+
+## Assignment-004
+Database Pooling
+
 ## Challenges
   * Challenge#1
     * Flow Daigram
